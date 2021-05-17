@@ -1,8 +1,27 @@
+@tailwind base;
+@tailwind components;
+
 /**
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
+@layer components{
+	.card{
+		@apply border-2 border-white rounded-md text-black m-8 md:w-72 lg:w-80 h-full;
+	}
 
+	.card-title{
+		@apply py-2 px-4 text-lg font-bold;
+	}
+
+	.btn{
+		@apply mt-8 sm:col-start-5 sm:col-end-7;
+	}
+
+	.my-navbar{
+		@apply bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500;
+	}
+}
 /**
  * Import variables
  */
@@ -14,7 +33,7 @@
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
  */
-
+@import "@fortawesome/fontawesome-free/css/all.css";
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
@@ -28,3 +47,5 @@
 /**
  * Do NOT include anything else in this file!
  */
+
+@tailwind utilities;
